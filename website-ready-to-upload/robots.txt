@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: /
+
+Host: https://www.chromelitedigital.co.ug
+Sitemap: https://www.chromelitedigital.co.ug/sitemap.xml
