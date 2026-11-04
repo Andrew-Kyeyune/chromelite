@@ -1,3 +1,7 @@
+// STAGING is true for builds on Vercel (VERCEL=1) or when NEXT_PUBLIC_SITE_ENV=staging.
+// Staging builds are hidden from search engines and show a "Staging" ribbon; production builds are not.
+export const IS_STAGING = process.env.VERCEL === "1" || process.env.NEXT_PUBLIC_SITE_ENV === "staging";
+
 // Central company details — sourced from Chromelite commercial invoices and the Company Profile 2026/27.
 export const SITE = {
   name: "Chromelite Technologies Limited",

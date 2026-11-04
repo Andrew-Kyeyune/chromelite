@@ -39,7 +39,10 @@ npm start          # preview the built /out folder
 
 ## 3. Publish it
 
-The `/out` folder is the complete website. A ready-built copy is included in this package (`website-ready-to-upload`).
+> **Staging and production pipeline:** see **DEPLOYMENT.md** for the full workflow (local computer → GitHub → Vercel staging → live server, with approval before every live release).
+
+
+The `/out` folder is the complete website (created by `npm run build`).
 
 - **cPanel / shared hosting:** upload the *contents* of `out/` into `public_html/` with File Manager or FTP.
 - **Netlify:** drag the `out/` folder onto app.netlify.com/drop, or connect the repository (build command `npm run build`, publish directory `out`).

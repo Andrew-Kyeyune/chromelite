@@ -299,3 +299,5 @@ h3 { font-size: 1.15rem; }
 @media (max-width: 560px) { .form { padding: 22px; } }
 .page-hero .lead { color: #F7DCDD; }
 [id] { scroll-margin-top: 96px; }
+
+.staging-ribbon { position: fixed; left: 12px; bottom: 12px; z-index: 70; background: #F2B33D; color: #111; font-size: 12px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; padding: 8px 14px; border-radius: 8px; box-shadow: 0 6px 18px rgba(0,0,0,.2); }

@@ -9,7 +9,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { JsonLd } from "@/components/ui";
-import { SITE } from "@/lib/site";
+import { SITE, IS_STAGING } from "@/lib/site";
 import { organizationSchema, websiteSchema } from "@/lib/seo";
 
 export const metadata: Metadata = {
@@ -37,7 +37,9 @@ export const metadata: Metadata = {
   },
   twitter: { card: "summary_large_image", title: "Chromelite Technologies", description: SITE.description, images: ["/og-image.png"] },
   icons: { icon: [{ url: "/favicon.ico", sizes: "32x32" }, { url: "/icon.svg", type: "image/svg+xml" }], apple: "/apple-touch-icon.png" },
-  robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1 } },
+  robots: IS_STAGING
+    ? { index: false, follow: false, googleBot: { index: false, follow: false } }
+    : { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1 } },
   // After verifying the site in Google Search Console / Bing Webmaster Tools, paste the codes here:
   // verification: { google: "YOUR-GOOGLE-CODE", other: { "msvalidate.01": "YOUR-BING-CODE" } },
   other: { "geo.region": "UG-102", "geo.placename": "Kampala" },
@@ -50,6 +52,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en-UG">
       <body>
         <a href="#main" className="skip">Skip to main content</a>
+        {IS_STAGING && <div className="staging-ribbon" role="note">Staging preview — not the live website</div>}
         <JsonLd data={organizationSchema()} />
         <JsonLd data={websiteSchema()} />
         <Header />
