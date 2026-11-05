@@ -25,7 +25,7 @@ export const SITE = {
   phones: ["+256 392 888 258", "+256 772 591 881"],
   phoneHref: ["tel:+256392888258", "tel:+256772591881"],
   whatsapp: "https://wa.me/256772591881",
-  emails: ["chromelite@chromelitedigital.co.ug", "andruk03@gmail.com"],
+  emails: ["tech@chromelitedigital.co.ug", "andruk03@gmail.com"],
   social: { handle: "@chromelitetechnologies" },
   tin: "1014153682",
   director: "Andrew Kyeyune",
