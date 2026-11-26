@@ -31,7 +31,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="container footer-bottom">
-        <span>© {year} {SITE.name}. All rights reserved. TIN {SITE.tin}.</span>
+        <span>© {year} {SITE.name}. All rights reserved.</span>
         <span>Kampala, Uganda</span>
       </div>
     </footer>
